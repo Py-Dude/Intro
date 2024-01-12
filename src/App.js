@@ -1,81 +1,83 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useState, useEffect } from "react";
-import Family from "./family";
-import Hobbies from "./hobbies";
+import Intro from "./Components/Intro/Intro.js";
+// import styles of this component
+import styles from "./App.module.css";
 
-const BackgroundWithScrollingText = () => {
-  const { scrollYProgress } = useScroll();
-  // const translateY = useTransform(scrollYProgress, [0, 1], ['100vh', '-50vh']);
-  const [scrollPosition, setScrollPosition] = useState(0);
+// import other components to use
+import MasonryLayout from "./Components/MasonryLayout/MasonryLayout";
+import ContainerCard from "./Components/ContainerCard/ContainerCard";
+import Dropdown from "./Components/Elements/Dropdown/Dropdown";
 
-  const handleScroll = () => {
-    const position = window.scrollY;
-    setScrollPosition(position);
+// import json files
+import images from "./Jsons/Images.json";
+
+// App component
+const App = () => {
+  // dropdown items
+  const ddItems = [
+    {
+      id: 1,
+      title: "All Images",
+      active: true,
+    },
+    {
+      id: 2,
+      title: "Topic Images",
+      active: false,
+    },
+    {
+      id: 3,
+      title: "Nature Images",
+      active: false,
+    },
+    {
+      id: 4,
+      title: "NFT Images",
+      active: false,
+    },
+    {
+      id: 5,
+      title: "Space Images",
+      active: false,
+    },
+  ];
+
+  const [categoryImage, setCategoryImage] = useState(images.categories.all);
+
+  const takeDdTitle = (ddTitle) => {
+    setCategoryImage(() => {
+      let categoryChoose = Object.keys(images.categories).filter((item) => {
+        const titleSplited = ddTitle.toLowerCase().split(" ")[0];
+        return item.toLowerCase().includes(titleSplited);
+      });
+      return [...images.categories[categoryChoose]];
+    });
   };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  // Transform scrollYProgress to translateY value for the text
-  const translateY = useTransform(scrollYProgress, [0, 1], ["100vh", "100vh"]);
-
-  // Transform scrollYProgress to opacity value for the background
-  const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [1, 0.5, 0]);
 
   return (
     <>
+      <Intro />
       <div
-        style={{
-          position: "relative",
-          height: "200vh", // Ensure the container is tall enough to allow for scrolling
-        }}
+        className="flex justify-content-center"
+        style={{ marginTop: "50px", padding: "50px" }}
       >
-        <div
-          style={{
-            backgroundImage: "url(/Logo1.gif)",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            height: "100vh",
-            width: "100%",
-            opacity: 1 - scrollPosition / 500, // Adjust the divisor to control the speed of the fade
-            transition: "opacity 0.5s ease-out",
-
-            position: "fixed", // Use fixed to keep the image in place on scroll
-          }}
-        />
-        <motion.div
-          style={{
-            position: "absolute",
-            top: "0",
-            left: "0",
-            right: "0",
-            height: "100vh",
-            display: "flex",
-            alignItems: "flex-end", // Start with text at the bottom
-            justifyContent: "center",
-            color: "black",
-            fontSize: "5rem",
-
-            translateY: translateY, // This will animate the text from bottom to top
-          }}
-        >
-          SHIVA BAJPAI
-        </motion.div>
-      </div>
-
-      <div>
-        <Family />
-      </div>
-      <div>
-        <Hobbies />
+        <ContainerCard>
+          <div
+            className={`${styles["gallery-setting"]} flex justify-content-between align-items-center`}
+          >
+            <h1>Hobbies</h1>
+            <Dropdown
+              title="All Images"
+              items={ddItems}
+              liftingDdTextUp={takeDdTitle}
+            />
+          </div>
+          <MasonryLayout images={categoryImage} />
+        </ContainerCard>
       </div>
     </>
   );
 };
 
-export default BackgroundWithScrollingText;
+export default App;
