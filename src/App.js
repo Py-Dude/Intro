@@ -81,10 +81,21 @@ const lineData = [2, 5.5, 2, 8.5, 1.5, 5];
           </div>
           <MasonryLayout images={categoryImage} />
           <LineChart
+           id="myLineChart"
  xAxis={[{ data: data }]}
  series={[{ data: lineData }]}
  width={500}
  height={300}
+ sx={{
+  "& .MuiChartsAxis-bottom .MuiChartsAxis-line": {
+    stroke: "hotpink", // Change the color
+    strokeWidth: 2, // Change the width
+  },
+  "& .MuiChartsAxis-left .MuiChartsAxis-line": {
+    stroke: "hotpink", // Change the color
+    strokeWidth: 2, // Change the width
+  },
+}}
 />
 
         </ContainerCard>

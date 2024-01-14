@@ -7,3 +7,8 @@
     font-size: 2rem;
     font-weight: bold;
 }
+#myLineChart .recharts-cartesian-axis path {
+    stroke: red; /* Change the color */
+    stroke-width: 8; /* Increase the stroke width */
+   }
+   
