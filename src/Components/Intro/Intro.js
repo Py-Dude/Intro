@@ -57,17 +57,17 @@ const BackgroundWithScrollingText = () => {
             display: "flex",
             alignItems: "flex-end", // Start with text at the bottom
             justifyContent: "center",
-            color: "hotpink",
+            color: "pink",
             fontSize: "5rem",
-            backgroundImage:
-              "linear-gradient(var(--angle),#77FAFC,#A8FCFD 25%,#C100B0)",
+
             translateY: translateY, // This will animate the text from bottom to top
           }}
         >
           SHIVA BAJPAI
         </motion.div>
       </div>
-      <div>{/* <Family /> */}</div>
+      <div>
+      </div>
     </>
   );
 };
