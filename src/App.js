@@ -87,6 +87,15 @@ const lineData = [2, 5.5, 2, 8.5, 1.5, 5];
  width={500}
  height={300}
  sx={{
+  "& .MuiChartsAxis-left .MuiChartsAxis-tickLabel": {
+    fontSize: "20px",
+    fill: "#ff0000", // Change the color of y-axis labels
+  },
+  "& .MuiChartsAxis-bottom .MuiChartsAxis-tickLabel": {
+    fontSize: "20px", // Change the font size of x-axis labels
+    fill: "#ff0000", // Change the color of y-axis labels
+
+  },
   "& .MuiChartsAxis-bottom .MuiChartsAxis-line": {
     stroke: "hotpink", // Change the color
     strokeWidth: 2, // Change the width
@@ -94,6 +103,7 @@ const lineData = [2, 5.5, 2, 8.5, 1.5, 5];
   "& .MuiChartsAxis-left .MuiChartsAxis-line": {
     stroke: "hotpink", // Change the color
     strokeWidth: 2, // Change the width
+    
   },
 }}
 />
