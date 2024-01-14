@@ -12,6 +12,8 @@ import ContainerCard from "./Components/ContainerCard/ContainerCard";
 import Dropdown from "./Components/Elements/Dropdown/Dropdown";
 import Effect from "./Components/Effects.js";
 
+import Grid from "@mui/material/Grid";
+
 // import json files
 import images from "./Jsons/Images.json";
 
@@ -85,7 +87,10 @@ const App = () => {
             />
           </div>
           <MasonryLayout images={categoryImage} />
+          &nbsp; &nbsp;
+          <h1>Academics</h1>
           <LineChart
+            margin={{ top: 40, right: 40 }}
             id="myLineChart"
             xAxis={[
               {
@@ -93,7 +98,7 @@ const App = () => {
                 tickNumber: 10,
                 label: "Percentage",
                 labelStyle: {
-                  fontSize: "20px", // Set the font size of the axis labels
+                  fontSize: "25px", // Set the font size of the axis labels
                   fill: "#ffb9b9", // Set the color of the axis labels
                 },
               },
@@ -104,9 +109,8 @@ const App = () => {
                 tickNumber: 10,
                 label: "Standard",
                 labelStyle: {
-                  fontSize: "20px", // Set the font size of the axis labels
+                  fontSize: "25px", // Set the font size of the axis labels
                   fill: "#ffb9b9", // Set the color of the axis labels
-                  transform: "translateX(-10px)",
                 },
               },
             ]}
