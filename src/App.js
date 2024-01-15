@@ -108,6 +108,65 @@ Passionate DevOps enthusiast with 2 years of hands-on experience. Specialized in
      />
    </div>
  </div>
+ <div>
+      <h1 style={{color:"white",fontWeight:"bold",fontSize:"2rem",justifyContent:"center",marginTop:"3rem",alignItems:"center",marginLeft:"2rem",marginBottom:"2rem"}}>Skills</h1>
+  
+      <Skills/>
+
+      </div>
+      <div>
+      <h1 style={{color:"white",fontWeight:"bold",fontSize:"2rem",justifyContent:"center",marginTop:"3rem",alignItems:"center",marginLeft:"2rem",marginBottom:"2rem"}}>Experience</h1>
+<Experience/>
+      </div>
+      <h1 style={{color:"white",fontWeight:"bold",fontSize:"2rem",justifyContent:"center",marginTop:"3rem",alignItems:"center",marginLeft:"2rem",marginBottom:"2rem"}}>Academic Record</h1>
+
+<LineChart
+  id="myLineChart"
+  xAxis={[
+    {
+      data: data,
+      tickNumber: 10,
+      label: "Percentage",
+      labelStyle: {
+        fontSize: "20px", // Set the font size of the axis labels
+        fill: "#ffb9b9", // Set the color of the axis labels
+      },
+    },
+  ]}
+  series={[{ data: lineData }]}
+  yAxis={[
+    {
+      tickNumber: 10,
+      label: "Standard",
+      labelStyle: {
+        fontSize: "20px", // Set the font size of the axis labels
+        fill: "#ffb9b9", // Set the color of the axis labels
+        transform: "translateX(-180px)",
+      },
+    },
+  ]}
+  width={1500}
+  height={800}
+  sx={{
+    "& .MuiChartsAxis-left .MuiChartsAxis-tickLabel": {
+      fontSize: "500px",
+      fill: "#ffb9b9", // Change the color of y-axis labels
+    },
+    "& .MuiChartsAxis-bottom .MuiChartsAxis-tickLabel": {
+      fontSize: "500px", // Change the font size of x-axis labels
+      fill: "#ffb9b9", // Change the color of y-axis labels
+    },
+    "& .MuiChartsAxis-bottom .MuiChartsAxis-line": {
+      stroke: "hotpink", // Change the color
+      strokeWidth: 4, // Change the width
+    },
+    "& .MuiChartsAxis-left .MuiChartsAxis-line": {
+      stroke: "hotpink", // Change the color
+      strokeWidth: 4, // Change the width
+    },
+  }}
+/>
+
        <div
         className="flex justify-content-center"
         style={{ marginTop: "50px", padding: "50px" }}
@@ -124,64 +183,8 @@ Passionate DevOps enthusiast with 2 years of hands-on experience. Specialized in
             />
           </div>
           <MasonryLayout images={categoryImage} />
-          <LineChart
-            id="myLineChart"
-            xAxis={[
-              {
-                data: data,
-                tickNumber: 10,
-                label: "Percentage",
-                labelStyle: {
-                  fontSize: "20px", // Set the font size of the axis labels
-                  fill: "#ffb9b9", // Set the color of the axis labels
-                },
-              },
-            ]}
-            series={[{ data: lineData }]}
-            yAxis={[
-              {
-                tickNumber: 10,
-                label: "Standard",
-                labelStyle: {
-                  fontSize: "20px", // Set the font size of the axis labels
-                  fill: "#ffb9b9", // Set the color of the axis labels
-                  transform: "translateX(-180px)",
-                },
-              },
-            ]}
-            width={1500}
-            height={800}
-            sx={{
-              "& .MuiChartsAxis-left .MuiChartsAxis-tickLabel": {
-                fontSize: "500px",
-                fill: "#ffb9b9", // Change the color of y-axis labels
-              },
-              "& .MuiChartsAxis-bottom .MuiChartsAxis-tickLabel": {
-                fontSize: "500px", // Change the font size of x-axis labels
-                fill: "#ffb9b9", // Change the color of y-axis labels
-              },
-              "& .MuiChartsAxis-bottom .MuiChartsAxis-line": {
-                stroke: "hotpink", // Change the color
-                strokeWidth: 4, // Change the width
-              },
-              "& .MuiChartsAxis-left .MuiChartsAxis-line": {
-                stroke: "hotpink", // Change the color
-                strokeWidth: 4, // Change the width
-              },
-            }}
-          />
         </ContainerCard>
 
-      </div>
-      <div>
-      <h1 style={{color:"white",fontWeight:"bold",fontSize:"2rem",justifyContent:"center",marginTop:"3rem",alignItems:"center",marginLeft:"2rem",marginBottom:"2rem"}}>Skills</h1>
-  
-      <Skills/>
-
-      </div>
-      <div>
-      <h1 style={{color:"white",fontWeight:"bold",fontSize:"2rem",justifyContent:"center",marginTop:"3rem",alignItems:"center",marginLeft:"2rem",marginBottom:"2rem"}}>Experience</h1>
-<Experience/>
       </div>
     </>
   );

@@ -1,28 +1,32 @@
 import MuiAlert, { AlertProps } from '@mui/material/Alert';
-import Stack from '@mui/material/Stack';
+import Grid from '@mui/material/Grid';
 import { FaReact, FaJsSquare } from "react-icons/fa";
 import { SiPython } from "react-icons/si";
 import { DiDocker } from "react-icons/di";
 import React from 'react'
-import Fade from '@mui/material/Fade';
+import { BiLogoPostgresql } from "react-icons/bi";
+import { FcLinux } from "react-icons/fc";
 
 export default function Skills() {
-    return (
-        <>
-        <Stack spacing={2} sx={{ width: '100%',margin:"2rem" }}>
-     
-        <MuiAlert className="scaleEffectAnimation" icon={<FaReact  />} severity="error" sx={{ bgcolor: '#61dafb', color: 'hotpink',fontWeight:"bold" }}>REACT</MuiAlert>
-<MuiAlert className="scaleEffectAnimation" icon={<FaJsSquare  />} severity="warning" sx={{ bgcolor: '#f7df1e', color: 'hotpink',fontWeight:"bold" }}>JAVASCRIPT</MuiAlert>
-<MuiAlert className="scaleEffectAnimation" icon={<SiPython  />} severity="info" sx={{ bgcolor: 'skin', color: 'hotpink',fontWeight:"bold" }}>PYTHON</MuiAlert>
-<MuiAlert className="scaleEffectAnimation" icon={<DiDocker  />} severity="success" sx={{ bgcolor: 'white', color: 'hotpink',fontWeight:"bold" }}>DOCKER</MuiAlert>
-          {/* <FaReact size={32} color="blue" />
-         <FaJsSquare size={32} color="yellow" />
-         <SiPython size={32} color="green" />
-         <DiDocker size={32} color="cyan" /> */}
+   return (
+       <>
+       <Grid container spacing={2} sx={{ margin:"2rem" }}>
+         <Grid item xs={4}>
+           <MuiAlert style={{margin:"1rem"}}className="scaleEffectAnimation" icon={<FaReact />} severity="error" sx={{ bgcolor: '#61dafb', color: 'hotpink',fontWeight:"bold" }}>REACT</MuiAlert>
+           <MuiAlert className="scaleEffectAnimation" icon={<FaJsSquare />} severity="warning" sx={{ bgcolor: '#f7df1e', color: 'hotpink',fontWeight:"bold" }}>JAVASCRIPT</MuiAlert>
+         </Grid>
+         <Grid item xs={4}>
+           <MuiAlert style={{margin:"1rem"}} className="scaleEffectAnimation" icon={<SiPython />} severity="info" sx={{ bgcolor: 'skin', color: 'hotpink',fontWeight:"bold" }}>PYTHON</MuiAlert>
+           <MuiAlert className="scaleEffectAnimation" icon={<FcLinux />} severity="warning" sx={{ bgcolor: 'orange', color: 'hotpink',fontWeight:"bold" }}>LINUX</MuiAlert>
 
-        </Stack>
-         <div>
-       </div>
-       </>
-      );}
+         </Grid>
+         <Grid item xs={4}>
+           <MuiAlert style={{margin:"1rem"}} className="scaleEffectAnimation" icon={<DiDocker />} severity="success" sx={{ bgcolor: 'white', color: 'hotpink',fontWeight:"bold" }}>DOCKER</MuiAlert>
+           <MuiAlert className="scaleEffectAnimation" icon={<BiLogoPostgresql />} severity="warning" sx={{ bgcolor: 'blue', color: 'hotpink',fontWeight:"bold" }}>POSTGRESQL</MuiAlert>
 
+         </Grid>
+       </Grid>
+        <div>
+      </div>
+      </>
+     );}
