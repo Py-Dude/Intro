@@ -5,12 +5,17 @@ import Intro from "./Components/Intro/Intro.js";
 import styles from "./App.module.css";
 import { createTheme, ThemeProvider, CssBaseline } from "@mui/material/styles";
 import { LineChart } from "@mui/x-charts/LineChart";
+import { HiArrowNarrowRight } from 'react-icons/hi';
 
 // import other components to use
 import MasonryLayout from "./Components/MasonryLayout/MasonryLayout";
 import ContainerCard from "./Components/ContainerCard/ContainerCard";
 import Dropdown from "./Components/Elements/Dropdown/Dropdown";
 import Effect from "./Components/Effects.js";
+import logo from "./assets/Ooty.jpg"
+import { Link } from "react-scroll"; 
+import Skills from "./Components/Skills/Skills.js"
+import Experience from "./Components/Experience/Experience.js";
 
 // import json files
 import images from "./Jsons/Images.json";
@@ -69,7 +74,41 @@ const App = () => {
   return (
     <>
       <Intro />
-      <div
+      <div className="about" style={{color:"white",fontWeight:"bold",fontSize:"2rem",justifyContent:"center",marginTop:"3rem",alignItems:"center",marginLeft:"2rem",marginBottom:"2rem"}}>
+       <Link
+         to="about"
+         smooth
+         duration={500}
+        //  className="group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer"
+       >
+         About Me
+         <span className="group-hover:rotate-90 duration-300">
+           <HiArrowNarrowRight size={25} className="ml-3" />
+         </span>
+       </Link>
+     </div>
+
+      <div style={{margin:"2rem"}} className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
+   <div className="flex flex-col justify-center h-full">
+     <br/><br/>
+     <p className="text-gray-500 py-4 max-w-md" style={{marginRight:"3rem"}} >
+    <span style={{color:"teal",fontWeight:"bold"}}> 🚀 DevOps Professional | 2 Years of Experience</span>
+<br/>
+<br/>
+Passionate DevOps enthusiast with 2 years of hands-on experience. Specialized in streamlining development and deployment processes. Proficient in CI/CD, Docker, Kubernetes, and cloud platforms. A problem solver committed to automation and continuous improvement. Let's connect and explore the exciting world of DevOps!
+
+     </p>
+   </div>
+   <div style={{ float: "left" }}>
+     <img
+     style={{border:"5px solid hotpink"}}
+       src={logo} 
+       alt="my profile"
+       className="rounded-2xl mx-auto w-2/3 md:w-full"
+     />
+   </div>
+ </div>
+       <div
         className="flex justify-content-center"
         style={{ marginTop: "50px", padding: "50px" }}
       >
@@ -106,7 +145,7 @@ const App = () => {
                 labelStyle: {
                   fontSize: "20px", // Set the font size of the axis labels
                   fill: "#ffb9b9", // Set the color of the axis labels
-                  transform: "translateX(-10px)",
+                  transform: "translateX(-180px)",
                 },
               },
             ]}
@@ -132,8 +171,18 @@ const App = () => {
             }}
           />
         </ContainerCard>
+
       </div>
-      <div></div>
+      <div>
+      <h1 style={{color:"white",fontWeight:"bold",fontSize:"2rem",justifyContent:"center",marginTop:"3rem",alignItems:"center",marginLeft:"2rem",marginBottom:"2rem"}}>Skills</h1>
+  
+      <Skills/>
+
+      </div>
+      <div>
+      <h1 style={{color:"white",fontWeight:"bold",fontSize:"2rem",justifyContent:"center",marginTop:"3rem",alignItems:"center",marginLeft:"2rem",marginBottom:"2rem"}}>Experience</h1>
+<Experience/>
+      </div>
     </>
   );
 };

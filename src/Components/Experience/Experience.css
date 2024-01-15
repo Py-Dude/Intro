@@ -1,0 +1,15 @@
+.skills-experience {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   }
+   
+   .skills ul, .experience ul {
+    list-style-type: none;
+    padding: 0;
+   }
+   
+   .skills li, .experience li {
+    margin-bottom: 1rem;
+   }
+   
