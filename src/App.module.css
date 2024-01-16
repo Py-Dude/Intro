@@ -16,19 +16,18 @@ h1 {
   stroke: #ffb9b9; /* Change the color */
   stroke-width: 8; /* Increase the stroke width */
 }
-.about{
+.about {
   align-items: center;
-    justify-content: center;
-    color: white !important;
-    font-size: 40px;
-    font-style: bold;
-    margin-bottom: 2rem
+  justify-content: center;
+  color: white !important;
+  font-size: 40px;
+  font-style: bold;
+  margin-bottom: 2rem;
 }
 .d-flex {
   display: flex;
- }
- 
- .align-items-center {
+}
+
+.align-items-center {
   align-items: center;
- }
- 
+}

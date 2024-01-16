@@ -113,7 +113,7 @@ const App = () => {
           >
             <span style={{ color: "teal", fontWeight: "bold" }}>
               {" "}
-              🚀 Source: Jhansi
+              🚀 Source: Jhansi, 1999
             </span>
             <br />
             <br />I was born in Jhansi, a historic city in Uttar Pradesh that is
@@ -128,14 +128,13 @@ const App = () => {
             <br />I moved to Lucknow, the capital of Uttar Pradesh, for my high
             school education. Lucknow is a city of nawabs and kebabs, where I
             learned to appreciate the art, cuisine, and architecture of the
-            Mughal era. I
+            Mughal era.
             <br />
             <br />
             <br />I then went to Chennai, the cultural capital of South India,
             for my college studies. Chennai is a vibrant and cosmopolitan city
-            that exposed me to different languages, religions, and traditions
-            for four years. I graduated from VIT Chennai with a degree in
-            Computer Science.
+            that exposed me to different languages, religions, and traditions. I
+            graduated from VIT Chennai with a degree in Computer Science.
             <br />
             <br />
             <br />I currently work in Kochi, a coastal city in Kerala that is a

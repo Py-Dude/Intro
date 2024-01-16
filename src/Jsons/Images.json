@@ -211,7 +211,7 @@
         "id": "wallpaper 1",
         "src": "img/wallpapers/black_dotnft.webp",
         "user": {
-          "src": "img/profile/1.png",
+          "src": "img/profile/2.png",
           "name": "Black Dot NFT",
           "job": "By Nothing"
         }
@@ -222,27 +222,27 @@
         "id": "wallpaper 1",
         "src": "img/wallpapers/T7.jpg",
         "user": {
-          "src": "img/profile/1.png",
-          "name": "Mumbai",
-          "job": "Mannat"
+          "src": "img/profile/2.png",
+          "name": "Previous blind turn",
+          "job": "Oty"
         }
       },
       {
         "id": "wallpaper 2",
         "src": "img/wallpapers/T8.jpg",
         "user": {
-          "src": "img/profile/2.png",
-          "name": "Mumbai",
-          "job": "Mannat"
+          "src": "img/profile/3.png",
+          "name": "Blind turn",
+          "job": "Ooty"
         }
       },
       {
         "id": "wallpaper 3",
         "src": "img/wallpapers/T9.jpg",
         "user": {
-          "src": "img/profile/3.png",
-          "name": "Mumbai",
-          "job": "Mannat"
+          "src": "img/profile/4.png",
+          "name": "Tea Garden",
+          "job": "Ooty"
         }
       }
     ]
